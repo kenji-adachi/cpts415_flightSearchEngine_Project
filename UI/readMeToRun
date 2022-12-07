@@ -1,0 +1,6 @@
+Ensure python is installed
+Ensure pip is installed
+
+pip install pyqt5
+
+run main.py to make sure you can run it.
