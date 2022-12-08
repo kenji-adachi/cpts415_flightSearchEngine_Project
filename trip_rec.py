@@ -4,7 +4,7 @@ import pymongo
 from pymongo import MongoClient
 import pandas as pd
 
-client = pymongo.MongoClient("mongodb+srv://Bobby:ZHICFXdHxxsx5ikx@cluster0.b8r61v1.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://Username:Password@cluster0.b8r61v1.mongodb.net/?retryWrites=true&w=majority")
 db = client['Cluster0'] # connects to our database
 
 class Node:
