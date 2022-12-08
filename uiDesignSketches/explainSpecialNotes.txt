@@ -1,0 +1,32 @@
+Special Note Descriptions For UI Design Sketch Images:
+
+
+
+*** Trip Search Page ***
+Destination could be nothing as one task states: 'Find all the cities reachable within d hops of a city (bounded 
+reachability)'
+
+This means that there is only a source needed. 
+The Destination can: 
+-be left empty or filled and just be ignored
+-Give option 'Any' or 'All'
+
+For the info section of trips:
+We have to decide what is being displayed in the output table/list
+-Should we have a double click option on a particular row to open a pop-up details?
+-Should all information be presented in columns?
+-etc...
+
+
+
+*** Fact Page ***
+For this page it includes:
+' • Airline aggregation: 
+  - Which country (or) territory has the highest number of Airports 
+  - Top K cities with most incoming/outgoing airlines                '
+From the project page on canvas.
+
+-Should there be more facts?
+-Will it be a check box and a display?
+-Straight up display text/label of the facts?
+-Can these just be implimented as a 'sorting' function when disaplying in airline/airport searches? (instead of facts page)
