@@ -14,12 +14,12 @@ class flightMainwindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.ui.button1.clicked.connect(self.updateText)
+        #self.ui.button1.clicked.connect(self.updateText)
 
-    def updateText(self):
-        print("pushed")
-        self.ui.label1.setText(self.ui.insertedTextBox.text())
-        self.ui.insertedTextBox.clear()
+    # def updateText(self):
+    #     print("pushed")
+    #     self.ui.label1.setText(self.ui.insertedTextBox.text())
+    #     self.ui.insertedTextBox.clear()
 
 
 
