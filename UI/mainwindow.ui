@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Flight Search Engine</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="HomeTab">
      <attribute name="title">
@@ -102,6 +102,36 @@
          <height>401</height>
         </rect>
        </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContents</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>false</bool>
+       </attribute>
       </widget>
      </widget>
      <widget class="QLineEdit" name="airportSearchBar">
@@ -138,6 +168,9 @@
          <height>22</height>
         </rect>
        </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
       </widget>
       <widget class="QComboBox" name="airportCityDrop">
        <property name="geometry">
@@ -147,6 +180,9 @@
          <width>221</width>
          <height>22</height>
         </rect>
+       </property>
+       <property name="placeholderText">
+        <string/>
        </property>
       </widget>
       <widget class="QLabel" name="label_3">
@@ -173,6 +209,19 @@
        </property>
        <property name="text">
         <string>City</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="clearFilterAirport">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Clear Filters</string>
        </property>
       </widget>
      </widget>
@@ -215,15 +264,8 @@
          <height>22</height>
         </rect>
        </property>
-      </widget>
-      <widget class="QComboBox" name="airlineCityDrop">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>80</y>
-         <width>221</width>
-         <height>22</height>
-        </rect>
+       <property name="placeholderText">
+        <string/>
        </property>
       </widget>
       <widget class="QLabel" name="label_5">
@@ -239,53 +281,53 @@
         <string>Country</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>80</y>
-         <width>49</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>City</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_7">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>130</y>
-         <width>49</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Stops</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="airlineStopsDrop">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>130</y>
-         <width>221</width>
-         <height>22</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QCheckBox" name="airlineCodeShareCheckBox">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>170</y>
+         <y>130</y>
          <width>91</width>
          <height>20</height>
         </rect>
        </property>
        <property name="text">
         <string>Code Share</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="clearFilterAirline">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Clear Filters</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="airlineSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>80</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="airlineStopCheckBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>76</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Stops</string>
        </property>
       </widget>
      </widget>
@@ -310,6 +352,27 @@
          <height>401</height>
         </rect>
        </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>false</bool>
+       </attribute>
       </widget>
      </widget>
     </widget>
@@ -321,7 +384,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>50</y>
+        <y>60</y>
         <width>621</width>
         <height>431</height>
        </rect>
@@ -338,13 +401,19 @@
          <height>401</height>
         </rect>
        </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
       </widget>
      </widget>
      <widget class="QGroupBox" name="tripsFilterGroupBox">
       <property name="geometry">
        <rect>
         <x>660</x>
-        <y>50</y>
+        <y>30</y>
         <width>381</width>
         <height>431</height>
        </rect>
@@ -352,16 +421,6 @@
       <property name="title">
        <string>Filters</string>
       </property>
-      <widget class="QComboBox" name="tripsMaxStopsDrop">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>30</y>
-         <width>211</width>
-         <height>22</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QComboBox" name="tripsNumHopsDrop">
        <property name="geometry">
         <rect>
@@ -408,30 +467,92 @@
         </rect>
        </property>
       </widget>
+      <widget class="QSpinBox" name="stopSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>211</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
-     <widget class="QLineEdit" name="tripsSourceAirportBar">
+     <widget class="QPushButton" name="findRoute">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>301</width>
+        <x>670</x>
+        <y>460</y>
+        <width>171</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Find Route</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearRoute">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>460</y>
+        <width>171</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="tripsSourceAirportBar">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>291</width>
         <height>22</height>
        </rect>
       </property>
       <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="tripsDestinAirportBar">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>30</y>
+        <width>291</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>291</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
        <string>Source Airport</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tripsDestinAirportBar">
+     <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>20</y>
-        <width>301</width>
-        <height>22</height>
+        <x>330</x>
+        <y>10</y>
+        <width>291</width>
+        <height>16</height>
        </rect>
       </property>
-      <property name="placeholderText">
+      <property name="text">
        <string>Destination Airport</string>
       </property>
      </widget>
