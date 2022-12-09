@@ -3,4 +3,8 @@ Ensure pip is installed
 
 pip install pyqt5
 
-run main.py to make sure you can run it.
+run main.py to run it
+
+If you dont have adjList data file, need to run trip_rec with lines 139-145 uncommented
+(Dont forget to comment those lines once you get the adjList data File)
+
